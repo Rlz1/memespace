@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Солнечная Система Мемов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="title">Солнечная Система Мемов</div>
+    <div class="instructions">Кликните на мем, чтобы посмотреть его полностью</div>
+    
+    <div class="universe">
+        <div class="solar-system" id="solarSystem">
+            <div class="sun"></div>
+            <!-- Орбиты и мемы будут созданы через JS -->
+        </div>
+    </div>
+    
+
+    <div class="controls">Сферы вращаются вокруг солнца, проходя перед и за ним</div>
+    <div class="gallery-container" id="galleryContainer" style="display:none;">
+        <div class="gallery" id="memeGallery"></div>
+    </div>
+
+    <div class="meme-modal" id="memeModal">
+        <img class="meme-image" id="memeImage" src="" alt="Мем">
+        <button class="close-modal" id="closeModal">Закрыть</button>
+    </div>
+    <script src="script.js"></script>
+    <button class="gallery-button" id="galleryButton">Галерея мемов</button>
+
+    <button class="add-meme-button" id="addMemeButton">Добавить мем</button>
+
+    <div class="add-meme-modal" id="addMemeModal">
+        <div class="modal-content">
+            <h2>Добавить свой мем</h2>
+            <input type="file" id="memeUpload" accept="image/*">
+            <input type="text" id="memeName" placeholder="Название мема">
+            <div class="modal-buttons">
+                <button id="cancelAddMeme">Отмена</button>
+                <button id="submitMeme">Добавить</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
